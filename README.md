@@ -7,7 +7,7 @@
 - [Usage](#usage)
 - [Tools](#tools)
 
-- [Live website](https://zydrunasrimkus.github.io/my-tracker/)
+- [Live website](https://optimistic-wilson-94b8c0.netlify.app/)
 
 ## About <a name = "about"></a>
 
