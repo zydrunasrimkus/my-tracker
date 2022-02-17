@@ -25,7 +25,7 @@ You can find your workout instantly on the map by clicking on workout date.
 
 ## Tools <a name = "tools"></a>
 
-HTML
-CSS
-Javascript ES6 Classes
+HTML,
+CSS,
+Javascript ES6 Classes,
 Leaflet library
