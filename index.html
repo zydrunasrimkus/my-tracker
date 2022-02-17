@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" translate="no" class="notranslate">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="google" content="notranslate" />
+    <title>My Tracker - Track Your Workouts</title>
+    <link rel="shortcut icon" type="image/png" href="/img/icon.png" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="node_modules\leaflet\dist\leaflet.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <script defer src="node_modules\leaflet\dist\leaflet.js"></script>
+    <script defer src="script.js"></script>
+  </head>
+  <body>
+    <div class="sidebar">
+      <p class="entry-text">Click anywhere on the map 😊</p>
+      <img src="/img/logo.png" alt="Logo" class="logo" />
+      <button class="findme">Find Me</button>
+      <button class="clear-data hidden">Clear data</button>
+      <ul class="workouts">
+        <form class="form hidden">
+          <i class="fa fa-close"></i>
+          <div class="form-row">
+            <label class="form-label">Type</label>
+            <select class="form-input form-input-type">
+              <option value="running">Running</option>
+              <option value="cycling">Cycling</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label class="form-label">Distance</label>
+            <input placeholder="km" class="form-input form-input-distance" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Duration</label>
+            <input placeholder="min" class="form-input form-input-duration" />
+          </div>
+          <div class="form-row">
+            <label class="form-label">Cadence</label>
+            <input
+              placeholder="step/min"
+              class="form-input form-input-cadence"
+            />
+          </div>
+          <div class="form-row form-row-hidden">
+            <label class="form-label">Elev Gain</label>
+            <input
+              placeholder="meters"
+              class="form-input form-input-elevgain"
+            />
+          </div>
+          <button>OK</button>
+        </form>
+      </ul>
+    </div>
+    <div id="map"></div>
+  </body>
+</html>

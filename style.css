@@ -1,0 +1,270 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+:root {
+  --sinopia: #605a56;
+  --tan-cray: #373331;
+  --greenish: #80ac7b;
+  --yellowish: #e8eaa1;
+}
+/* #ecf39e 90a955 4f772d 31572c 132a13*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  height: 100vh;
+  overscroll-behavior-y: none;
+}
+
+/* SIDEBAR */
+.sidebar {
+  background-color: var(--tan-cray);
+  flex-basis: 40rem;
+  display: flex;
+  flex-direction: column;
+  padding: 2.5rem;
+  position: relative;
+}
+.entry-text {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  text-align: left;
+  color: var(--yellowish);
+  font-size: 1.5rem;
+  font-weight: 600;
+  width: 100%;
+  margin: 0 auto;
+}
+/* LOGO */
+.logo {
+  align-self: center;
+  margin-bottom: 1.75rem;
+  width: 20rem;
+}
+/*  FIND ME BTN*/
+.findme {
+  align-self: center;
+  width: 10rem;
+  background-color: var(--yellowish);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+.findme:hover {
+  background-color: var(--greenish);
+}
+
+/* CLEAR DATA */
+.clear-data {
+  align-self: center;
+  width: 10rem;
+  background-color: var(--yellowish);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-bottom: 1rem;
+}
+
+.clear-data:hover {
+  background-color: var(--greenish);
+}
+
+.hidden {
+  display: none;
+}
+
+/* close button */
+.fa-close {
+  position: absolute;
+  top: 2%;
+  right: 2%;
+  cursor: pointer;
+  transition: 0.5s;
+  color: var(--yellowish);
+}
+
+.fa-close:hover {
+  color: var(--greenish);
+}
+
+/* HIDE FORM */
+.form.hidden {
+  transform: translateY(-30rem);
+  height: 0;
+  padding: 0 2.25rem;
+  margin-bottom: 0;
+  opacity: 0;
+}
+
+/* FORM ROW HIDDEN*/
+.form-row-hidden {
+  display: none;
+}
+/* FORM STUFF */
+.form {
+  position: relative;
+  background-color: var(--sinopia);
+  border-radius: 5px;
+  padding: 1.5rem 2.75rem;
+  margin-bottom: 1.75rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+
+  /* Match height and activity boxes */
+  transition: all 0.5s, transform 1ms;
+  color: var(--yellowish);
+}
+
+.form button {
+  display: block;
+  background-color: var(--yellowish);
+  border: none;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  padding: 0.75rem 0.5rem;
+  cursor: pointer;
+  grid-column-end: span 2;
+  transition: 0.5s;
+}
+
+.form button:hover {
+  background-color: var(--greenish);
+}
+
+.form-label {
+  flex: 0 0 50%;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.form-input {
+  width: 100%;
+  padding: 0.5rem 1.1rem;
+  margin: 0.2rem 0;
+  font-family: inherit;
+  font-size: 0.75rem;
+  border: none;
+  border-radius: 3px;
+  transition: all 0.2s;
+}
+
+.form-input:focus {
+  outline: none;
+  background-color: #fff;
+}
+/* WORKOUTS container*/
+.workouts {
+  list-style: none;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  align-self: center;
+}
+
+.workouts::-webkit-scrollbar {
+  width: 0;
+}
+.workout {
+  font-size: 1rem;
+  border-radius: 5px;
+  padding: 1.5rem 2.25rem;
+  margin-bottom: 1.75rem;
+  cursor: pointer;
+  background-color: var(--sinopia);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0.75rem 1.5rem;
+  transition: 0.5s;
+  color: #fff;
+}
+
+.workout:hover {
+  background-color: var(--greenish);
+}
+
+.workout-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  grid-column: 1 / -1;
+}
+
+.workout-running {
+  border-left: 6px solid green;
+}
+.workout-cycling {
+  border-left: 6px solid orange;
+}
+
+.workout-title {
+  color: var(--yellowish);
+}
+
+.workout-row {
+  display: flex;
+  align-items: baseline;
+  color: var(--yellowish);
+}
+
+.workout-units {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.workout-stats {
+  margin: 0 0.25rem;
+}
+/* GEO MAP */
+#map {
+  flex: 1;
+}
+
+/* POPUP STYLES */
+.leaflet-popup .leaflet-popup-content-wrapper {
+  background-color: var(--tan-cray);
+  color: var(--yellowish);
+  border-radius: 5px;
+  padding-right: 0.6rem;
+}
+
+.leaflet-popup .leaflet-popup-content {
+  font-size: 0.85rem;
+}
+
+.leaflet-popup .leaflet-popup-tip {
+  background-color: var(--tan-cray);
+}
+.running-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid green;
+}
+
+.cycling-popup .leaflet-popup-content-wrapper {
+  border-left: 5px solid orange;
+}
